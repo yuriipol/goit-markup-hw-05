@@ -278,6 +278,7 @@ body {
   margin: 0 auto;
   margin-bottom: 30px;
   color: var(--primary-white-color);
+  font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
@@ -300,8 +301,8 @@ body {
   border-color: var(--accent-color);
   cursor: pointer;
 
-  transition-property: color, border-color;
-  transition-duration: 2500ms;
+  transition-property: background-color, border-color;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover,
