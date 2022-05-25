@@ -102,6 +102,10 @@ body {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link.current {
@@ -141,12 +145,18 @@ body {
   height: 12px;
   margin-right: 10px;
   fill: var(--title-text-color);
+  transition: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-tel {
   width: 10px;
   height: 16px;
   margin-right: 10px;
   fill: var(--title-text-color);
+  transition: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* .icon-mail:hover,
 .icon-tel:hover {
@@ -183,6 +193,10 @@ body {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts.list .tel {
   /* outline: 2px solid tomato; */
@@ -193,6 +207,10 @@ body {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts.list .mail:hover .icon-mail,
 .contacts.list .mail:focus .icon-mail {
@@ -262,6 +280,10 @@ body {
   border: 1px solid;
   border-color: var(--accent-color);
   cursor: pointer;
+
+  transition: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover,
 .button:focus {
@@ -432,12 +454,20 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+
+  transition: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   /* outline: 1px solid tomato; */
 }
 .icon-network {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
+
+  transition: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-network:hover .icon-network,
 .link-network:focus .icon-network {
@@ -473,6 +503,9 @@ body {
   width: 106px;
   height: 60px;
   fill: #afb1b8;
+  transition: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-clients:hover .icon-clients,
 .link-clients:focus .icon-clients {
@@ -522,6 +555,9 @@ body {
   color: var(--title-text-color);
   text-decoration: none;
   line-height: 1.71;
+  transition: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .adress.list .mail:hover,
 .adress.list .mail:focus {
@@ -554,6 +590,9 @@ body {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
   /* outline: 1px solid tomato; */
+  transition: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list-items:not(:last-child) {
   margin-right: 10px;
@@ -623,6 +662,9 @@ body {
     0px 2px 2px rgba(0, 0, 0, 0.12); */
   border-radius: 4px;
   border-color: transparent;
+  transition: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filtr-btn.active:hover,
@@ -672,6 +714,10 @@ body {
 }
 .work.list.pages .link {
   display: block;
+
+  transition: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .work.list.pages .link:hover,
 .work.list.pages .link:focus {
@@ -700,14 +746,19 @@ body {
 .work-link-discription {
   position: absolute;
   margin: 0;
-  width: 100%;
+  /* width: 322px; */
   padding: 63px 24px;
 
   opacity: 0;
-
+  /* text-align: center; */
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
+
+  transition: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
+  /* transition: 1500ms opacity linear; */
 
   color: var(--primary-white-color);
   /* background: rgba(33, 150, 243, 0.9); */
@@ -720,6 +771,11 @@ body {
   position: absolute;
   opacity: 0;
 
+  transition: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
+  /* transition: 1500ms opacity linear; */
+
   width: 100%;
   height: 100%;
 
@@ -728,10 +784,56 @@ body {
 .work.list.pages .item .link:hover .work-link-discription,
 .work.list.pages .item .link:focus .work-link-discription {
   opacity: 1;
-  transition: 1500ms opacity linear;
 }
 .work.list.pages .item .link:hover .work-link-position::before,
 .work.list.pages .item .link:focus .work-link-position::before {
   opacity: 1;
-  transition: 1500ms opacity linear;
+}
+/* Style modal window */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 528px;
+  height: 581px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.icon-close {
+  width: 18px;
+  height: 18px;
 }
